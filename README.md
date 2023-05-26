@@ -1,62 +1,27 @@
-# angular-keycloak-tutorial
-Angular + Keycloak example projekt
+# DemoFrontend
 
-## references
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 
-* keycloak getting started
-	* https://www.keycloak.org/getting-started/getting-started-docker
-	* https://www.keycloak.org/docs/latest/getting_started/index.html
-* angular keycloak
-	* https://www.npmjs.com/package/keycloak-angular
+## Development server
 
-## start keycloak
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-`docker-compose up`
+## Code scaffolding
 
-## initialize realm and demo user and client
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-* log into administration console with admin user `http://localhost:8080/auth`
-* create a new realm e.g. `my-demo-realm` 
-* using the created realm create an new user
-	* users -> add user
-	* set username
-	* set Email Verified to ON
-	* in Credentials set a temporary password
-* login with the new user / temporary password into the demo realm
-	* `http://localhost:8080/auth/realms/my-demo-realm/account/`
-	* insert a new password when asked
-	* complete required fields such as email, firstname, lastname
-* in the admin console go to Client and create a new client `my-demo-client`
+## Build
 
-## creating an angular project
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-Angular project with routing.
+## Running unit tests
 
-`ng new demo-frontend --routing`
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Generate two components.
+## Running end-to-end tests
 
-`ng generate component public-space`
-`ng generate component restricted-space`
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-Add routing to the AppRoutingModule to redirect to the two components.
+## Further help
 
-Create router links.
-
-## install keylocak-angular and keycloak-js library
-
-`npm install keycloak-angular keycloak-js`
-
-Setup KeycloakAngular in AppModule: add initialize function, provider and import KeycloakAngularModule
-
-## add guard to app
-
-`ng generate guard keycloak`
-
-## loading user profile into your app
-
-Configure keycloak angular  with 'loadUserProfileAtStartUp: true' to load user profile.
-
-With KeycloakService you can access user profile details.
-
-With Keycloak service you can logout user (with optional rediect URL).
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

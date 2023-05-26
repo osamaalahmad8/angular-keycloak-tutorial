@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PublicSpaceComponent } from './public-space/public-space.component';
 import { RestrictedSpaceComponent } from './restricted-space/restricted-space.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+import { XyzComponent } from './xyz/xyz.component';
 
 
 function initializeKeycloak(keycloak: KeycloakService) {
@@ -29,7 +30,8 @@ function initializeKeycloak(keycloak: KeycloakService) {
   declarations: [
     AppComponent,
     PublicSpaceComponent,
-    RestrictedSpaceComponent
+    RestrictedSpaceComponent,
+    XyzComponent
   ],
   imports: [
     BrowserModule,
